@@ -1,0 +1,6 @@
+from eglass/goruntime
+RUN mkdir /go
+workdir /go
+COPY ["./bin/ws", "./"]
+COPY ["./ws/msyh.ttf", "./"]
+cmd ["/go/ws"]

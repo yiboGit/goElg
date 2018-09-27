@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  hello-1:
+    image: service/hello:v1.0
+    restart: always
+    environment:
+      IP: 172.19.0.34
+      Port: 3000
+      Host: docker.epeijing.cn
+      Etcd: t.epeijing.cn:2379
+      ServiceName: hello
+    ports:
+      - 3000:8080
+
+  hello-2:
+    image: service/hello:v1.0
+    restart: always
+    environment:
+      IP: 172.19.0.34
+      Port: 4000
+      Host: docker.epeijing.cn
+      Etcd: t.epeijing.cn:2379
+      ServiceName: hello
+    ports:
+      - 4000:8080
+      

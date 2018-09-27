@@ -1,0 +1,5 @@
+from eglass/goruntime
+RUN mkdir /go
+workdir /go
+COPY ["./bin/card-push", "./"]
+cmd ["/go/card-push"]

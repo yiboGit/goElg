@@ -1,0 +1,5 @@
+from eglass/goruntime
+RUN mkdir /go
+workdir /go
+COPY ["./bin/scheduler", "./"]
+cmd ["/go/scheduler"]

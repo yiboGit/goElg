@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  scheduler:
+    restart: always
+    image: scheduler
+  ws:
+    restart: always
+    image: ws
+    ports: 
+      - "3002:3002"
+  push: 
+    restart: always
+    image: card-push
+  moniter:
+    restart: always
+    image: moniter
